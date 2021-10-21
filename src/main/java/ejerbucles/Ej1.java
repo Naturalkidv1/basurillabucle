@@ -17,7 +17,7 @@ public class Ej1 {
         while (x<100) {
             System.out.println(x);
             System.out.println(" - ");
-            x = x + 1;
+            x = x + x;
         }
             
         

@@ -27,15 +27,17 @@ public class NumerosPrimos {
         
         **/
         
-        final int RANGO_MIN = 2;
-        final int RANGO_MAX = 600_000_000;
-        
+        final int NUM_MIN = 2;
+        final int NUM_MAX = 600_000_000;
+        final int RANGO_MIN = 3;
         
         Scanner entradaTeclado = new Scanner(System.in);
         Random numAleatorio = new Random();
         
         int opcion;
         int n = 0;
+        boolean par;
+        int rango_max;
         
         do {
             
@@ -56,12 +58,12 @@ public class NumerosPrimos {
                         do {
                         System.out.println("Recuerde: Debe estar comprendido entre 2 y 600_000_000.");
                         n = entradaTeclado.nextInt();
-                        } while (!(n>=RANGO_MIN && n<=RANGO_MAX));
+                        } while (!(n>=NUM_MIN && n<=NUM_MAX));
                         break;
                         
                     case 2:
                         System.out.println("Ha elegido la opción de generar un número aleatorio.");
-                        n = numAleatorio.nextInt(RANGO_MAX - RANGO_MIN + 1) + RANGO_MIN;
+                        n = numAleatorio.nextInt(NUM_MAX - NUM_MIN + 1) + NUM_MIN;
                         System.out.println("El número aleatorio escogido ha sido " + n);
                         
                     case 3: 
@@ -76,12 +78,26 @@ public class NumerosPrimos {
             } while (opcion !=3);
         
             
-            
+            rango_max = n/2;
             System.out.println("Ahora, comprobaremos si " + n +  " es un Número Primo.");
-            
+            if ((n != 2)&&(n%2==0)) {
+                System.out.println(n + " no es primo.");
+                
+            } else {
+                
+                for (int i = 3; i <= rango_max; i=i+2)
+                    
+                    
+                    
+                
+                    
+                    System.out.println(n + " es primo.");
+                    
+                }
+            }
             
             
             
     }
     
-}
+
